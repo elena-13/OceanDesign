@@ -1,0 +1,144 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+//First screen styles
+h1, h2, h3, h4, h5, h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+.top-line
+	padding-top: 20px
+	border-bottom: 1px solid #7b7673
+	.logo
+		margin: 0
+		padding: 0
+		.icon
+			display: inline-block
+			img 
+				max-width: 100%
+				height: auto
+		.company-name
+			display: inline-block
+			h3
+				color: #fff
+				font-family: "OpenSansLight", 21px, sans-serif	
+				font-weight: normal
+				
+	nav
+		.main-menu
+			margin: 0
+			padding: 0
+			float: right
+			font-family: "OpenSansRegular", sans-serif
+			font-weight: normal
+			font-size: em(14px)
+			opacity: 0.8
+			line-height: 4
+			li 
+				display: inline-block
+				list-style-type: none
+				padding: 0 20px
+				a 
+					color: #fff
+					text-decoration: none
+					display: block
+					text-transform: uppercase
+					&:hover
+						color: $accent
+
+input[type=search]
+	-webkit-appearance: textfield
+	-webkit-box-sizing: content-box
+	font-family: inherit
+	font-size: 100%
+	background: url(img/search-icon.png) no-repeat 9px center
+	color: transparent
+	cursor: pointer
+	border: solid 1px #ccc
+	border-radius: 10em
+	transition: all .5s
+	padding: 9px 10px 9px 32px
+	&:focus
+		width: 130px
+		background-color: #fff
+		border-color: #6dcff6
+		box-shadow: 0 0 5px rgba(109,207,246,.5)
+	&:hover
+		background-color: #fff
+
+
+
+
+
+input::-webkit-search-cancel-button, input::-webkit-search-decoration
+	display: none
+
+
+
+
+.main-head
+	//padding-top: 30%
+	//background-image: url('img/main-bg.jpg')
+	box-shadow: 0 0 0 390px rgba(0, 0, 0, 0.33) inset
+	position: relative
+	background-size: cover
+	background-position: center 
+	max-width: 100%
+	position: relative	
+
+
+
+.header-wrap
+	padding: 230px 0
+	//position: relative	
+	.slider
+		//position: absolute
+		display: block
+		#left-holder
+			display: inline-block
+			left: 0
+			margin-left: 100px
+			position: absolute
+			color: #fff
+			&:hover
+				color: $accent
+		#right-holder
+			display: inline-block
+			right: 0
+			margin-right: 100px
+			position: absolute
+			color: #fff
+			&:hover
+				color: $accent
+		.inscription-slide
+			//position: absolute	
+			overflow: hidden
+			text-transform: capitalize
+			.bolt-icon
+				img
+					display: block
+					margin: auto
+			.inscription
+				h1 
+					font-family: "OpenSansBold", sans-serif
+					font-size: em(36px)		
+					color: #fff
+					text-align: center
+					margin-bottom: 10px 
+					line-height: 1
+					padding: 0
+				span 
+					font-family: "OpenSansRegular", sans-serif
+					font-size: em(15px)
+					color: #fff
+					letter-spacing: 2px
+					display: block
+					opacity: 0.8
+					text-align: center
+
+
+
+
+			
+
+

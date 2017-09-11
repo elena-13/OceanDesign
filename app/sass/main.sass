@@ -1,0 +1,364 @@
+@import "bourbon"
+@import "vars"
+@import "libs"
+
+//Custom styles here
+
+h2, h3, h4
+	font-family: "OpenSansLight", sans-serif
+	color: $main-text-color
+	text-align: center
+	opacity: 0.7
+
+
+
+
+section, footer 
+	padding-top: 90px 
+
+
+.wrap-block
+	color: $main-text-color
+	text-align: center
+	font-family: "OpenSansLight", sans-serif
+	img 
+		display: block
+		margin: auto 
+	h3	
+		font-size: em(21px)
+	p 
+		font-size: em(14px)
+		opacity: 0.7
+
+.tittle-wrap
+	h2 
+		font-size: em(30px)
+		margin: 0
+	h3 
+		margin: 0
+		font-size: em(15px)
+		letter-spacing: 2px
+
+/* Gallery */
+.gallery-block
+	padding-top: 40px
+	position: relative
+	figure
+		overflow: hidden
+		position: relative
+		background: #3085a3
+		text-align: center
+		cursor: pointer
+		min-width: 320px
+		max-width: 384px
+		max-height: 220px
+		img 
+			position: relative
+			display: block
+			max-width: 100%
+			height: 100%
+		figcaption
+			padding: 2em
+			color: $main-text-color
+			text-transform: uppercase
+			font-size: em(13px)
+			-webkit-backface-visibility: hidden
+			backface-visibility: hidden
+			>a 
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: 1000
+				text-indent: 200%
+				white-space: nowrap
+				font-size: 0
+				opacity: 0
+			h2 
+				word-spacing: -0.15em
+				font-weight: 100
+				line-height: 1
+				margin: 0
+				font-family: "RobotoRegular", sans-serif
+				span 
+					font-family: "OpenSansBold", sans-serif
+			p 
+				margin: 0
+				letter-spacing: 1px
+				font-size: em(11px)	
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+				transition: opacity 0.35s, transform 0.35s	
+				
+		
+figure.effect-sadie
+	figcaption
+		&::before 
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: -webkit-linear-gradient(top, rgba(55,153,179,0) 0%, rgba(45,110,128,0.9) 100%)
+			background: linear-gradient(to bottom, rgba(55,153,179,0) 0%, rgba(45,110,128,0.9) 100%)
+			content: ''
+			opacity: 0
+			-webkit-transform: translate3d(0,50%,0)
+			transform: translate3d(0,50%,0)
+			transition: opacity 0.35s, transform 0.35s
+	h2 
+		position: absolute
+		top: 70%
+		left: 0
+		width: 100%
+		color: $main-text-color
+		-webkit-transition: -webkit-transform 0.35s, color 0.35s
+		transition: transform 0.35s, color 0.35s
+		-webkit-transform: translate3d(0,-50%,0)
+		transform: translate3d(0,-50%,0)
+		opacity: 0
+	p 
+		position: absolute
+		bottom: 0
+		left: 0
+		padding: 2em
+		width: 100%
+		opacity: 0
+		-webkit-transform: translate3d(0,10px,0)
+		transform: translate3d(0,10px,0)
+		-webkit-transition: opacity 0.35s, -webkit-transform 0.35s
+		transition: opacity 0.35s, transform 0.35s
+
+figure.effect-sadie
+	&:hover
+		figcaption, p
+			&::before 
+				opacity: 1
+				-webkit-transform: translate3d(0,0,0)
+				transform: translate3d(0,0,0)	
+		h2 
+			color: #fff
+			opacity: 1
+			-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0)
+			transform: translate3d(0,-50%,0) translate3d(0,-40px,0)		
+
+
+
+
+
+.section-wrapper
+	color: $main-text-color
+	text-align: center
+	font-family: "OpenSansLight", sans-serif
+	font-size: em(15px)
+	text-align: left
+	padding-bottom: 60px
+	h3
+		font-size: em(23px)
+		border-left: 2px solid $accent
+		text-align: left
+		padding-left: 10px
+	ul
+		padding: 0
+		>li 
+			text-align: left
+			line-height: 35px
+			list-style-image: url(../img/icon-arrow.png)
+			list-style-position: inside 
+	.twitter
+		margin-left: 30px
+		li 
+			list-style-type: none
+			list-style-image: url(../img/twitter.png)
+			line-height: 20px
+			list-style-position: outside
+			margin: 6px 0
+	p 
+		margin: 0		
+		
+
+	button
+		background-color: $accent 
+		color: #fff
+		font-family: "OpenSansRegular", sans-serif
+		text-align: center
+		font-size: em(14px)
+		padding: 5px 30px
+		outline: none
+		border-style: none
+		margin-top: 20px
+		&:hover
+			background: $accent  linear-gradient($accent , #2599cf);
+			box-shadow: 0 1px 2px rgba(0,0,0,.1);
+		&:active
+			background: #2599cf  linear-gradient(#2599cf , $accent);
+			box-shadow: 0 1px 2px rgba(0,0,0,.1) inset;
+
+	
+			
+
+
+.dark-section
+	position: relative
+	background-size: cover
+	background-position: center
+	box-shadow: 0 0 0 390px rgba(0, 0, 0, 0.55) inset
+	.tittle-wrap
+		h2 
+			color: #fff
+		h3
+			color: #fff
+			margin: 0
+	.wrap-block
+		color: #fff
+		padding-top: 60px
+		padding-bottom: 30px
+		p 	
+			margin: 0
+		h3
+			color: #fff
+			margin-bottom: 0
+
+.comments
+	position: relative
+	margin-bottom: 40px
+	overflow: hidden
+	max-height: 900px
+	background-color: #f7f7f7
+	.tittle-wrap
+		padding-bottom: 70px
+	.slider	
+		margin-bottom: 30px
+		.slide-coment
+			overflow: hidden
+			color: $main-text-color
+			text-align: center
+			font-family: "OpenSansLight", sans-serif
+			font-size: em(16px)
+			text-align: center
+			img 	
+				display: block
+				border-radius: 100%
+				width: 100px
+				border: 4px solid #e5e5e5
+				margin: auto
+			p 
+				text-align: center
+				display: block
+				margin: 40px 150px
+		.owl-dots
+			span 
+				border: 1px solid $accent	
+				height: 13px
+				width: 13px
+				&:hover
+					background: $accent	
+.owl-theme 
+	.owl-dots 
+		.owl-dot.active span, 
+		.owl-theme .owl-dots .owl-dot
+			&:hover 
+				background: $accent				
+				
+
+.brand-wrapper
+	img
+		display: block
+		margin: auto
+		opacity: 0.5
+
+.footer-section
+	background-color: #333333
+	color: #fff
+	padding-top: 40px
+	font-size: em(14px)
+	font-family: "OpenSansLight", sans-serif
+	.footer-wrapper
+		h3 	
+			color: #fff	
+			font-size: em(23px)
+			border-left: 2px solid $accent
+			text-align: left
+			padding-left: 10px	
+		p 
+			opacity: 0.7
+		li 
+			opacity: 0.7
+			list-style-type: none
+		 .fa-ul 
+			line-height: 2
+			.fa-li
+				line-height: 2	 
+		.icons-top
+			padding: 0
+			li
+				background: url("../img/Sprite.png") no-repeat
+				display: inline-block
+				width: 60px
+				height: 60px
+				border: 1px solid rgba(255,255,255,.4)
+				margin: 3px
+
+			.icon2
+				background-position: -62px 0
+			.icon3
+				background-position: -124px 0	
+			.icon4
+				background-position: -186px 0	
+			.icon5 
+				background-position: -248px 0	
+		.icons-bottom
+			padding: 0
+			li
+				background: url("../img/Sprite.png") no-repeat
+				display: inline-block
+				width: 60px
+				height: 60px
+				border: 1px solid rgba(255,255,255,.4)
+				margin: 3px
+			.icon6 	
+				background-position: 0 -66px	
+			.icon7 
+				background-position: -62px -66px	
+			.icon8 
+				background-position: -124px -66px	
+			.icon9
+				background-position: -187px -66px
+			.icon10 		
+				background-position: -251px -66px
+
+
+.social-wrap
+	opacity: 0.7
+	.youtube
+		background: url("../img/icon-youtube.png") no-repeat	
+		width: 24px
+		height: 24px
+		display: inline-block		
+		margin-right: 5px
+		//vertical-align: bottom
+	.twitter 
+		background: url("../img/icon-twitter.png") no-repeat	
+		width: 24px
+		height: 24px
+		display: inline-block	
+		//vertical-align: center
+	.facebook 
+		background: url("../img/icon-facebook.png") no-repeat	
+		width: 24px
+		height: 24px
+		display: inline-block		
+		//vertical-align: bottom
+	.github 
+		background: url("../img/icon-github.png") no-repeat	
+		width: 24px
+		height: 24px
+		display: inline-block		
+		//vertical-align: bottom		
+
+
+
+@import "media"
+
+//@import "app/libs/Navigation/css/normalize"
+//@import "app/libs/Navigation/css/demo"
